@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Sidebar/Navbar";
-import AnimatedRoutes from "./components/AnimatedRoutes"; // 👈 import it
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => { 
-    console.log("Dark mode inside effect:", darkMode); 
+  useEffect(() => {
     const storedMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(storedMode);
   }, []);
@@ -22,12 +22,22 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-300">
-      <Router>
+    <Router>
+      {/* Full page wrapper */}
+      <div className="flex flex-col min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+        
+        {/* Navbar at top */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <AnimatedRoutes /> {/* 👈 moved routes here */}
-      </Router>
-    </div>
+
+        {/* Main page content fills remaining height */}
+        <div className="flex-grow">
+          <AnimatedRoutes />
+        </div>
+
+        {/* Sticky footer at bottom */}
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

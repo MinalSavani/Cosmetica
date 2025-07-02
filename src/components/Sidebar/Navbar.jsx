@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import logo from "../../assets/logo.png";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
 
 function Navbar({ darkMode, setDarkMode }) {
+  const navigate=useNavigate()
   const [sidebar, setSidebar] = useState(false);
   const [subnav, setSubNav] = useState(null);
 
@@ -22,7 +26,7 @@ function Navbar({ darkMode, setDarkMode }) {
   return (
     <>
       {/* Top Navbar */}
-      <div className="text-black  hover:bg-black cursor-pointer dark:text-white h-[80px] flex items-center shadow-md w-full justify-between px-4">
+      <div className=" bg-white dark:bg-black text-black  cursor-pointer dark:text-white h-[80px] flex items-center shadow-md w-full justify-between px-4">
         {/* Sidebar Toggle Button */}
         <button
           onClick={showSidebar}
@@ -38,7 +42,7 @@ function Navbar({ darkMode, setDarkMode }) {
                src={logo}
              alt="Cosmetica Logo"
             className="h-[60px] w-auto"
-/>
+       />
         </div>
 
         {/* Right Icons */}
@@ -51,8 +55,15 @@ function Navbar({ darkMode, setDarkMode }) {
             className="text-2xl text-black dark:text-white"
             aria-label="Toggle Dark Mode"
           >
-            {darkMode ? <FaIcons.FaSun /> : <FaIcons.FaMoon />}
+            {darkMode ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
           </button>
+          <button onClick={()=>navigate('/cart')}>
+            <FaShoppingCart />
+
+          </button>
+
+
+         
         </div>
       </div>
 
@@ -84,6 +95,7 @@ function Navbar({ darkMode, setDarkMode }) {
                   item.subMenu ? showSubnav(item.title) : setSidebar(false)
                 }
               >
+                {item.path ? (
                 <Link
                   to={item.path}
                   className="flex items-center space-x-5 text-lg w-full"
@@ -91,6 +103,12 @@ function Navbar({ darkMode, setDarkMode }) {
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>
+                ):(
+                  <div className="flex items-center space-x-5 text-lg w-full">
+                       {item.icon}
+                   <span>{item.title}</span>
+                   </div>
+                )}
 
                 {/* Show dropdown arrow if submenu exists */}
                 {item.subMenu && (

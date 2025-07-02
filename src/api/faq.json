@@ -1,0 +1,79 @@
+ [
+    {
+        "id": 1,
+        "question": "How can I search and browse products on the website?",
+         "answer":"You can search for products using the search bar located at the top of the page or browse through the available product categories on the homepage. " ,
+         "category": "Placing an Order" 
+},
+  {
+    "id": 2,
+    "question": "Can I modify or cancel an already placed order?",
+    "answer": "Unfortunately, we are unable to modify or cancel orders once they have been placed for security and efficiency reasons in order processing. Please contact us as soon as possible if you need assistance.",
+    "category": "Placing an Order" 
+},
+  {
+    "id": 3,
+    "question": "How can I check the sorck of a product?",
+    "answer": "Product stock availability is displayed on each product page. If a product is in stock, it will be indicated as 'In Stock.' If its unavailable, it will be marked as Out of Stock.",
+    "category": "Placing an Order" 
+},
+
+  {
+    "id": 4,
+    "question": "What delivery options are availabel and what are the associated costs?",
+    "answer": "We offer multiple delivery options, including standard, express, or free shipping, depending on your location and order value. Exact costs will be displayed during the checkout process.",
+     "category": "Shipping and Delivery" 
+  },
+  {
+    "id": 5,
+    "question": "Can I avail international delivery?",
+    "answer": "Yes, we do offer international delivery. Costs and delivery times may vary depending on your exact location.",
+     "category": "Shipping and Delivery"  
+},
+
+  {
+    "id":6,
+    "question":"What is return policy for products?",
+     "answer":"We accept returns within 30 days of receiving your order. Products must be in new, unused condition, and have the original packaging intact.",
+    "category":"Returns and Exchanges"
+    },
+
+  {
+    "id":7,
+    "question":"How can i initiate a return or exchange process?",
+    "answer":"To initiate a return or exchange process, please contact us through our contact page or send an email to [email protected] We will respond with further instructions.",
+    "category":"Returns and Exchanges"
+  },
+  {
+    "id":8,
+    "question":"How can I contact our customer service for further questions?",
+    "answer":"You can contact our customer service team through our contact page or by email at [email protected] We'll be happy to assist you with any questions or concerns you may have.",
+    "category": "Support and Contact"
+},
+{
+     "id":9,
+    "question":"What are the working hours of our customer service? ",
+     "answer":"Our customer service team is available Monday through Friday, between 9:00 AM and 6:00 PM, to assist you with any issues or inquiries",
+     "category": "Support and Contact"
+},
+
+{
+     "id":10,
+     "question":"How long does it take to receive a response from customer service? ",
+     "answer":"We strive to respond to all inquiries as quickly as possible. Typically, you can expect a response within 24-48 hours during regular business days.",
+    "category": "Support and Contact"
+},
+{
+    "id":11,
+    "question":"Is there a phone number I can call for immediate assistance?",
+    "answer":"Yes, we have a dedicated customer service hotline available during business hours for immediate assistance. You can find our contact number on the Contact Us page.",
+     "category": "Support and Contact"
+},  
+{
+  "id":12,
+    "question":"Do you offer live chat support for real-time assistance?",
+    "answer":"Yes, we provide live chat support for real-time assistance during specified hours. Look for the chat icon in the bottom corner of the website to start a chat session with one of our representatives."  ,
+    "category": "Support and Contact"
+}
+  
+]

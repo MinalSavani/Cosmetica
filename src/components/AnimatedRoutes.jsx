@@ -13,6 +13,10 @@ import Sneakers from "./Pages/Sneakers";
 import TShirts from "./Pages/TShirts";
 import Promotions from "./Pages/Promotions";
 import ProductDetail from "./ProductDetail";
+import Cart from "./Cart";
+import Faq from "./Pages/Faq";
+import Footer from "./Footer";
+import Privacy from "./Pages/Privacy";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -31,7 +35,9 @@ const AnimatedRoutes = () => {
         <Route path="/sneakers" element={<Sneakers />} />
         <Route path="/promotions" element={<Promotions />} />
         <Route path="/products/:id" element={<ProductDetail />} />
-
+        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/faq" element={<Faq/>}/>
+        <Route path="/privacy" element={<Privacy/>}/>
       </Routes>
     </AnimatePresence>
   );

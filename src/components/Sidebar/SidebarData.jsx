@@ -22,13 +22,12 @@ export const SidebarData = [
    cName: "nav-text",
   },
   {
-    title: "SORTBY",
-    path: "/sortby",
-    cName: "nav-text",
+    title: "SORT BY",
+    // path: "/sortby",
+    // cName: "nav-text",
     iconClosed:<AiIcons.AiOutlineDown/>,
     iconOpened:<AiIcons.AiOutlineUp/>,
-
-    subMenu:[
+  subMenu:[
       {title:"Jeans",path:"/jeans"},
       {title:"Shirts",path:"/shirts"},
       {title:"TShirts",path:"/tshirts"},
@@ -36,8 +35,14 @@ export const SidebarData = [
       {title:"Promotions",path:"/promotions"},
     ]
   },
+
   {
-    title: "Blog",
+    title:"FAQ",
+    path:"/faq",
+    cName:"nav-text",
+  },
+  {
+    title: "BLOG",
     path: "/blog",
     cName: "nav-text",
   },
